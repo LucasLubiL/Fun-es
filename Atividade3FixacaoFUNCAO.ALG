@@ -11,7 +11,9 @@ funcao adicao:real
 
 
 Var
+
    x,z:real
+   
 Inicio
 
    escreval("Digite um numero para fazer adiçao")
@@ -23,11 +25,65 @@ Inicio
    retorne x+z
 fimfuncao
 
+funcao subtracao:real
 
 Var
+
+   a,b:real
+   
+Inicio
+
+   escreval("Digite um numero para fazer subtração")
+   leia(a)
+
+   escreval("Digite um numero para fazer subtração")
+   leia(b)
+
+   retorne a-b
+fimfuncao
+
+funcao divisao:real
+
+Var
+
+   c,d:real
+   
+Inicio
+
+   escreval("Digite um numero para fazer divisão")
+   leia(c)
+
+   escreval("Digite um numero para fazer divisão")
+   leia(d)
+
+   retorne c/d
+fimfuncao
+
+funcao multi:real
+
+Var
+
+   f,g:real
+   
+Inicio
+
+   escreval("Digite um numero para fazer multiplicação")
+   leia(f)
+
+   escreval("Digite um numero para fazer multiplicação")
+   leia(g)
+
+   retorne f*g
+fimfuncao
+
+
+
+
+
+Var
+
    opcao:inteiro
    a,s,d,m:real
-
 
 Inicio
 
@@ -38,7 +94,7 @@ Inicio
 
       se(opcao=-1)entao
          escreval("FIM")
-          fimalgoritmo
+         fimalgoritmo
       fimse
 
       escreval("Escolha oq deseja fazer")
@@ -51,42 +107,45 @@ Inicio
       escreval
       leia(opcao)
 
-     enquanto (opcao<1)ou(opcao>4) faca
-      se(opcao=-1)entao
-         escreval("FIM")
+      enquanto (opcao<1)ou(opcao>4) faca
+        se(opcao=-1)entao
+          escreval("FIM")
           fimalgoritmo
-      fimse
-      escreval("Escolha oq deseja fazer")
-      escreval
-      escreval("Digite -1 para encerrar")
-      escreval("Digite 1 para fazer uma adiçao")
-      escreval("Digite 2 para fazer subtraçao")
-      escreval("Digite 3 para fazer divisao")
-      escreval("Digite 4 para fazer multiplicaçao")
-      escreval
-      leia(opcao)
-     fimenquanto
-     
-    escolha(opcao)
+        fimse
+        escreval("Escolha oq deseja fazer")
+        escreval
+        escreval("Digite -1 para encerrar")
+        escreval("Digite 1 para fazer uma adiçao")
+        escreval("Digite 2 para fazer subtraçao")
+        escreval("Digite 3 para fazer divisao")
+        escreval("Digite 4 para fazer multiplicaçao")
+        escreval
+        leia(opcao)
+      fimenquanto
 
-     Caso 1
+      escolha(opcao)
 
-       a<-adicao
-       escreval("A soma dos dois é de ",a)
+        Caso 1
 
-     Caso 2
+             a<-adicao
+             escreval("A soma dos dois é de ",a)
 
-       s<-subtracao
+        Caso 2
 
-     Caso 3
+             s<-subtracao
+             escreval("A subtraçao dos dois é de ",s)
 
-       d<-divisao
+        Caso 3
 
-     Caso 4
+             d<-divisao
+             escreval("A divisão dos dois é de ",d)
 
-       m<-multi
+        Caso 4
 
-    fimescolha
+             m<-multi
+             escreval("A multiplicação dos dois é de ",m)
+
+      fimescolha
 
 
    fimenquanto
